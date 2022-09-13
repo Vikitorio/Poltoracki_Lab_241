@@ -34,13 +34,17 @@ namespace @HumanT
                 Console.WriteLine("3 - Изменить элемент по имени");
                 tempChoose = Int32.Parse(Console.ReadLine());
                 switch(tempChoose){
+                    case 0:
+                        break;
                     case 1:
                         TempList.printHumans();
                         break;
                     case 2:
+                        Console.WriteLine("Введите имя: ");
                         TempList.printObjByName(Console.ReadLine());
                         break;
                     case 3:
+                        Console.WriteLine("Введите имя: ");
                         TempList.changeObjByName(Console.ReadLine());
                         TempList.printHumans();
                         break;

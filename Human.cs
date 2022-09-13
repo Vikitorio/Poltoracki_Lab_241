@@ -29,11 +29,11 @@ namespace @HumanT
         }
 
         public void changeInfo(){
-            Console.WriteLine("");
+            Console.WriteLine("Введите новое имя: ");
             this._name = Console.ReadLine();
-            Console.WriteLine("");
+            Console.WriteLine("Введите новую фамилию: ");
              this._surname = Console.ReadLine();
-            Console.WriteLine("");
+            Console.WriteLine("Введите новий возраст: ");
              this._age = Int32.Parse(Console.ReadLine());
         }
         public static bool operator >(Human one, Human two)
