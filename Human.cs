@@ -1,11 +1,14 @@
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace @HumanT
 {
+  
     class Human
     {
         private string _name;
@@ -27,7 +30,12 @@ namespace @HumanT
             this._age = age;
             this._adress = adress;
         }
-
+        public void WriteToJson(string fileLink,Human human){
+  
+            string JsonData = JsonConvert.SerializeObject(human);
+            File.WriteAllText(fileLink, JsonData);
+            
+        }
         public void changeInfo(){
             Console.WriteLine("Введите новое имя: ");
             this._name = Console.ReadLine();

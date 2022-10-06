@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace @HumanT
 {
@@ -52,6 +53,18 @@ namespace @HumanT
                 listData += listHumans[i].dataToStr();
             return listData;
         }
+          public void WriteToJson(string fileLink,List<Human> list){
+  
+            string JsonData = JsonConvert.SerializeObject(list);
+            File.WriteAllText(fileLink, JsonData);
+            
         }
+
+        public List<Human> List{
+            get{return listHumans;}
+            set{this.listHumans= value;}
+        }
+        }
+        
     }
 

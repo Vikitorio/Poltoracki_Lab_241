@@ -28,3 +28,5 @@ F:\Хду 2\Полторацкий\Laborat241\Poltoracki_Lab_241\obj\Debug\net6.
 F:\Хду 2\Полторацкий\Laborat241\Poltoracki_Lab_241\obj\Debug\net6.0\HumanT.pdb
 F:\Хду 2\Полторацкий\Laborat241\Poltoracki_Lab_241\obj\Debug\net6.0\HumanT.genruntimeconfig.cache
 F:\Хду 2\Полторацкий\Laborat241\Poltoracki_Lab_241\obj\Debug\net6.0\ref\HumanT.dll
+F:\Хду 2\Полторацкий\Laborat241\Poltoracki_Lab_241\bin\Debug\net6.0\Newtonsoft.Json.dll
+F:\Хду 2\Полторацкий\Laborat241\Poltoracki_Lab_241\obj\Debug\net6.0\HumanT.csproj.CopyComplete

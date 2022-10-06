@@ -13,6 +13,7 @@ namespace @HumanT
     {   
         static void Main(string[] args)
         {
+            string JsonFilePath = "text.json";
             listHuman TempList = new listHuman();
             Human firstHuman =  new Human();
             Human secondHuman =  new Human("Светлана","Карбишева" ,44, new AdressHuman("Ukraine", "cherson", "Stepana Banderu ",23));
@@ -32,6 +33,8 @@ namespace @HumanT
                 Console.WriteLine("1 - Распечатать весь Лист");
                 Console.WriteLine("2 - Разпечатать элемент по имени");
                 Console.WriteLine("3 - Изменить элемент по имени");
+                Console.WriteLine("4 - write obj to JsonFile");
+                Console.WriteLine("5 - all list to json");
                 tempChoose = Int32.Parse(Console.ReadLine());
                 switch(tempChoose){
                     case 0:
@@ -48,6 +51,18 @@ namespace @HumanT
                         TempList.changeObjByName(Console.ReadLine());
                         TempList.printHumans();
                         break;
+                    case 4:
+                        Console.WriteLine("Введите id: ");
+                         List<Human> tempL = TempList.List;
+                         Human tempH = tempL[Int32.Parse(Console.ReadLine())];
+                         tempH.WriteToJson(JsonFilePath,tempH);
+                        TempList.printHumans();
+                        break;
+                     case 5:
+                        Console.WriteLine("Введите id: ");
+                        TempList.WriteToJson(JsonFilePath,TempList.List);
+                        TempList.printHumans();
+                        break;    
                 }
             }
             Console.ReadLine();
