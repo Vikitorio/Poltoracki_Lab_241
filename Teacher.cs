@@ -33,6 +33,14 @@ namespace @HumanT
             str = "Subject: " + _subject.ToString() +"\n" + "Salary" + _salary +"\n" + "Person Data:" + _humanData.dataToStr();
             return str;
         }
+        public string Name{
+            get{return _humanData.Name;}
+            set{_humanData.Name = value;}
+        }
+          public int Age{
+            get{return _humanData.Age;}
+            set{_humanData.Age = value;}
+        }
         public  Subject  SubjectsT{
             get{return _subject;}
             set{_subject = value;}

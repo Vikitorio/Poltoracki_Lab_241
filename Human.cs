@@ -30,8 +30,8 @@ namespace @HumanT
             this._age = age;
             this._adress = adress;
         }
-        public void WriteToJson(string fileLink,Human human){
-  
+        public void WriteToJson(string fileLink){
+            Human human = this;
             string JsonData = JsonConvert.SerializeObject(human);
             File.WriteAllText(fileLink, JsonData);
             

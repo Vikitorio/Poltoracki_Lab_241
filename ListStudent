@@ -1,0 +1,67 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+
+namespace @HumanT
+{
+    class listStudent
+    {
+        private List<Student> listStudents;
+
+        public listStudent()
+        {
+            listStudents = new List<Student>();
+        }
+       
+        public void AddStudent(Student a){
+            listStudents.Add(a);
+        }
+        public void printStudents()
+        {
+            for (int i = 0; i < listStudents.Count(); i++){
+                listStudents[i].printInfo();
+                Console.WriteLine("________________________________");
+            }
+        }
+        public void printObjByName(string name){
+            for(int i = 0 ;i < listStudents.Count();i++){
+                if(listStudents[i].Name == name){
+                    listStudents[i].printInfo();
+                }
+
+            }
+        }
+            public void changeObjByName(string name){
+            for(int i = 0 ;i < listStudents.Count();i++){
+                if(listStudents[i].Name == name){
+                    listStudents[i].HumanData.changeInfo();
+                }
+
+            }
+        }
+
+        public string showListStr()
+        {
+            string listData = "";
+            for (int i = 0; i < listStudents.Count(); i++)
+                listData += listStudents[i].dataToStr();
+            return listData;
+        }
+          public void WriteToJson(string fileLink,List<Human> list){
+  
+            string JsonData = JsonConvert.SerializeObject(list);
+            File.WriteAllText(fileLink, JsonData);
+            
+        }
+
+        public List<Student> List{
+            get{return listStudents;}
+            set{this.listStudents = value;}
+        }
+        }
+        
+    }
+

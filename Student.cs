@@ -35,6 +35,14 @@ namespace @HumanT{
             get{return _humanData;}
             set{_humanData = value; }
         }
+        public string Name{
+            get{return _humanData.Name;}
+            set{_humanData.Name = value;}
+        }
+          public int Age{
+            get{return _humanData.Age;}
+            set{_humanData.Age = value;}
+        }
         public int AdmissionYear {
             get{return this._admissionYear;}
             set{this._admissionYear = value;}

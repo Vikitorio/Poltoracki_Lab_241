@@ -35,6 +35,8 @@ namespace @HumanT
                 Console.WriteLine("3 - Изменить элемент по имени");
                 Console.WriteLine("4 - write obj to JsonFile");
                 Console.WriteLine("5 - all list to json");
+                Console.WriteLine("6 - sort By age low to high");
+                Console.WriteLine("7 - sort By age hight to low");
                 tempChoose = Int32.Parse(Console.ReadLine());
                 switch(tempChoose){
                     case 0:
@@ -55,12 +57,19 @@ namespace @HumanT
                         Console.WriteLine("Введите id: ");
                          List<Human> tempL = TempList.List;
                          Human tempH = tempL[Int32.Parse(Console.ReadLine())];
-                         tempH.WriteToJson(JsonFilePath,tempH);
+                         tempH.WriteToJson(JsonFilePath);
                         TempList.printHumans();
                         break;
                      case 5:
-                        Console.WriteLine("Введите id: ");
-                        TempList.WriteToJson(JsonFilePath,TempList.List);
+                        TempList.WriteToJson(JsonFilePath);
+                        TempList.printHumans();
+                        break;  
+                    case 6:
+                        TempList.sortByAgeLowToHigh();
+                        TempList.printHumans();
+                        break;  
+                    case 7:
+                        TempList.sortByAgeHightToLow();
                         TempList.printHumans();
                         break;    
                 }

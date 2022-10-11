@@ -15,10 +15,7 @@ namespace @HumanT
         {
             listHumans = new List<Human>();
         }
-        public void addNewHuman(Human human)
-        {
-            listHumans.Add(human);
-        }
+
         public void AddHuman(Human a){
             listHumans.Add(a);
         }
@@ -53,11 +50,37 @@ namespace @HumanT
                 listData += listHumans[i].dataToStr();
             return listData;
         }
-          public void WriteToJson(string fileLink,List<Human> list){
-  
+          public void WriteToJson(string fileLink){
+            List<Human> list = listHumans;
             string JsonData = JsonConvert.SerializeObject(list);
             File.WriteAllText(fileLink, JsonData);
             
+        }
+        public void sortByAgeLowToHigh(){
+            List<Human> list = listHumans;
+            Human temp;
+            for(int i = 1; i<list.Count();i++){
+                for(int j = 1; j<list.Count();j++){
+                    if(list[j]<list[j-1]){
+                        temp = list[j];
+                        list[j] = list[j-1];
+                        list[j-1] = temp;
+                    }
+                }
+            }
+        }
+         public void sortByAgeHightToLow(){
+            List<Human> list = listHumans;
+            Human temp;
+            for(int i = 1; i<list.Count();i++){
+                for(int j = 1; j<list.Count();j++){
+                    if(list[j]>list[j-1]){
+                        temp = list[j];
+                        list[j] = list[j-1];
+                        list[j-1] = temp;
+                    }
+                }
+            }
         }
 
         public List<Human> List{
