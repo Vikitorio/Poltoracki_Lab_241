@@ -51,11 +51,15 @@ namespace @HumanT
             return listData;
         }
           public void WriteToJson(string fileLink){
-            List<Human> list = listHumans;
+            List<Human> list = this.listHumans;
             string JsonData = JsonConvert.SerializeObject(list);
             File.WriteAllText(fileLink, JsonData);
             
         }
+            public void readFromJson(string fileLink){
+                string jsonData = File.ReadAllText(fileLink);
+                this.listHumans = JsonConvert.DeserializeObject<List<Human>>(jsonData);
+            }
         public void sortByAgeLowToHigh(){
             List<Human> list = listHumans;
             Human temp;

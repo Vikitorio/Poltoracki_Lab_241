@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "0U+dazKDAYxKljPz2xKlxyLgZskMN9LF55Y7oWvwbrl6Kn80g4+T/aH2mP/5+wzO5yoKWNnlo0GH0JXC5v74zQ==",
+  "dgSpecHash": "NGV1KD2j4Uf85luI5vB3oHDA7cEoyTmo9//XCK0II+ysZ1j+v2d7tq7EGh0jTYlAHdaBwRCmKNwpoF78Y6M22w==",
   "success": true,
-  "projectFilePath": "F:\\Хду 2\\Полторацкий\\Laborat241\\Poltoracki_Lab_241\\HumanT.csproj",
+  "projectFilePath": "D:\\C#-Progect\\Laborat241\\Poltoracki_Lab_241\\HumanT.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Светуля\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "C:\\Users\\mikha\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

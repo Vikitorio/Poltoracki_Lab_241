@@ -37,21 +37,25 @@ namespace @HumanT
                 Console.WriteLine("5 - all list to json");
                 Console.WriteLine("6 - sort By age low to high");
                 Console.WriteLine("7 - sort By age hight to low");
+                Console.WriteLine("8 - Read List from Json");
                 tempChoose = Int32.Parse(Console.ReadLine());
                 switch(tempChoose){
                     case 0:
                         break;
                     case 1:
                         TempList.printHumans();
+                        Console.ReadLine();
                         break;
                     case 2:
                         Console.WriteLine("Введите имя: ");
                         TempList.printObjByName(Console.ReadLine());
+                        Console.ReadLine();
                         break;
                     case 3:
                         Console.WriteLine("Введите имя: ");
                         TempList.changeObjByName(Console.ReadLine());
                         TempList.printHumans();
+                        Console.ReadLine();
                         break;
                     case 4:
                         Console.WriteLine("Введите id: ");
@@ -59,19 +63,28 @@ namespace @HumanT
                          Human tempH = tempL[Int32.Parse(Console.ReadLine())];
                          tempH.WriteToJson(JsonFilePath);
                         TempList.printHumans();
+                        Console.ReadLine();
                         break;
                      case 5:
                         TempList.WriteToJson(JsonFilePath);
                         TempList.printHumans();
+                        Console.ReadLine();
                         break;  
                     case 6:
                         TempList.sortByAgeLowToHigh();
                         TempList.printHumans();
+                        Console.ReadLine();
                         break;  
                     case 7:
                         TempList.sortByAgeHightToLow();
                         TempList.printHumans();
-                        break;    
+                        Console.ReadLine();
+                        break; 
+                    case 8:
+                        TempList.readFromJson(JsonFilePath);
+                        TempList.printHumans();
+                        Console.ReadLine();
+                        break;  
                 }
             }
             Console.ReadLine();
