@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 
 namespace @HumanT
 {
-    class listTeacher
+    class listTeacher:listHuman
     {
         private List<Teacher> _listTeachers;
 
@@ -31,7 +31,7 @@ namespace @HumanT
         }
         public void printObjByName(string name){
             for(int i = 0 ;i < _listTeachers.Count();i++){
-                if( _listTeachers[i].HumanData.Name == name){
+                if( _listTeachers[i].Name == name){
                     _listTeachers[i].printInfo();
                 }
 

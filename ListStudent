@@ -37,7 +37,7 @@ namespace @HumanT
             public void changeObjByName(string name){
             for(int i = 0 ;i < listStudents.Count();i++){
                 if(listStudents[i].Name == name){
-                    listStudents[i].HumanData.changeInfo();
+                    listStudents[i].changeInfo();
                 }
 
             }

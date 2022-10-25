@@ -11,10 +11,10 @@ namespace @HumanT
   
     class Human
     {
-        private string _name;
-        private string _surname;
-        private int _age;
-        private AdressHuman _adress ;
+        protected string _name;
+        protected string _surname;
+        protected int _age;
+        protected AdressHuman _adress ;
 
         public Human()
         {
